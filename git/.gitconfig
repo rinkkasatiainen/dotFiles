@@ -1,10 +1,10 @@
 [http]
 	sslVerify = false
 [user]
-	email = aki.salmi@ambientia.fi
+	email = aki.salmi@iki.fi
 	name = Aki Salmi
 [core]
-	excludesfile = /Users/akis/.gitignore_global
+	excludesfile = /Users/akisalmi/.gitignore_global
 	editor = vi
 	autocrlf = input
 [merge]
