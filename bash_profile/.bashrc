@@ -1,7 +1,11 @@
 #!/bin/bash
 
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
 alias byobu="TERM=screen-256color-bce byobu"
+  #setenv TERM "xterm-color"
+setenv CLICOLOR "true"
+export LSCOLORS=exfxcxdxbxexexabagacad
+
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
 ##alias tmux="TERM=screen-256color tmux" #this makes colors work with tmux
 #### alias tmux="TERM=screen-256color-bce tmux"
 
@@ -14,8 +18,8 @@ alias gitcd="clear; git diff"
 
 
 # enable color support of ls and also add handy aliases
-#if [ -x /usr/bin/dircolors ]; then
-   #test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+if [ -x /usr/bin/dircolors ]; then
+   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
    alias ls='ls --color=auto'
    #alias dir='dir --color=auto'
    #alias vdir='vdir --color=auto'
@@ -23,9 +27,10 @@ alias gitcd="clear; git diff"
    alias grep='grep --color=auto'
    alias fgrep='fgrep --color=auto'
    alias egrep='egrep --color=auto'
-  #fi
+fi
 
 # some more ls aliases
+alias ls='ls -G'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
