@@ -8,5 +8,5 @@ export AWKPATH=$HOME/.awk
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/akis/.gvm/bin/gvm-init.sh" ]] && source "/Users/akis/.gvm/bin/gvm-init.sh"
+[[ -s "/Users/`whoami`/.local_bash_profile" ]] && source "/Users/`whoami`/.local_bash_profile"
 export PATH=/usr/local/bin:$PATH

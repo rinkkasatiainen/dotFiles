@@ -182,4 +182,10 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+
+" for coffee-script-vim
+autocmd QuickFixCmdPost * nested cwindow | redraw!
+autocmd BufWritePost *.coffee silent make!
+" end for coffee-sript-vim
+
 source $VIMRUNTIME/macros/matchit.vim

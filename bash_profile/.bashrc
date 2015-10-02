@@ -14,8 +14,8 @@ alias gitcd="clear; git diff"
 
 
 # enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+#if [ -x /usr/bin/dircolors ]; then
+   #test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
    alias ls='ls --color=auto'
    #alias dir='dir --color=auto'
    #alias vdir='vdir --color=auto'
@@ -23,7 +23,7 @@ if [ -x /usr/bin/dircolors ]; then
    alias grep='grep --color=auto'
    alias fgrep='fgrep --color=auto'
    alias egrep='egrep --color=auto'
-fi
+  #fi
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -63,12 +63,13 @@ alias ln='ln -i'
 # alias chgrp='chgrp --preserve-root'
 
 ## export BYOBU_PREFIX=/usr/local/Cellar/byobu/5.75/
+[ -r /Users/akis/.byobu/prompt ] && . /Users/akis/.byobu/prompt   #byobu-prompt#
 
 if test -f ~/.rvm/scripts/rvm; then
       [ "$(type -t rvm)" = "function" ] || source ~/.rvm/scripts/rvm
     fi
 
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/akis/.gvm/bin/gvm-init.sh" ]] && source "/Users/akis/.gvm/bin/gvm-init.sh"
 
-[ -r /Users/akis/.byobu/prompt ] && . /Users/akis/.byobu/prompt   #byobu-prompt#
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+  [[ -s "/Users/`whoami`/.local_bashrc" ]] && source "/Users/`whoami`/.local_bashrc"
+
