@@ -1,8 +1,9 @@
 #!/bin/bash
+PS1='\h:\W \u\$ '
 
 alias byobu="TERM=screen-256color-bce byobu"
   #setenv TERM "xterm-color"
-setenv CLICOLOR "true"
+#setenv CLICOLOR "true"
 export LSCOLORS=exfxcxdxbxexexabagacad
 
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
