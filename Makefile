@@ -18,9 +18,9 @@ install-mutt:
 	ln -s ~/.mutt/offlineimaprc ~/.offlineimaprc
 
 install-git:
-	rm -rf ~/.gitconfig ~/.gitignore_global
+	rm -rf ~/.gitconfig ~/.gitignore
 	ln -s `pwd`/git/gitconfig ~/.gitconfig
-	ln -s `pwd`/git/gitignore_global ~/.gitignore_global
+	ln -s `pwd`/git/gitignore_global ~/.gitignore
 
 install-zsh:
 	rm -rf ~/.zshrc ~/.oh-my-zsh ~/.zsh ~/.zprofile

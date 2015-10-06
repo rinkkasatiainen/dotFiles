@@ -4,7 +4,7 @@
 	email = aki.salmi@iki.fi
 	name = Aki Salmi
 [core]
-	excludesfile = /Users/akisalmi/.gitignore_global
+	excludesfile = ~/.gitignore
 	editor = vi
 	autocrlf = input
 [merge]
