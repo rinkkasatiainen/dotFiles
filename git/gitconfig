@@ -1,8 +1,7 @@
 [http]
 	sslVerify = false
-[user]
-	email = aki.salmi@iki.fi
-	name = Aki Salmi
+[include]
+  path = ~/.local_gitconfig; include by absolute path
 [core]
 	excludesfile = ~/.gitignore
 	editor = vi
