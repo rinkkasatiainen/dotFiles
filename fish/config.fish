@@ -1,4 +1,4 @@
-set DEFAULT_USER jan
+set DEFAULT_USER akis
 
 if [ -e "$TMUX" ]
   set -gx TERM xterm-256color
