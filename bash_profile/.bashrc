@@ -71,11 +71,7 @@ alias ln='ln -i'
 ## export BYOBU_PREFIX=/usr/local/Cellar/byobu/5.75/
 [ -r /Users/akis/.byobu/prompt ] && . /Users/akis/.byobu/prompt   #byobu-prompt#
 
-if test -f ~/.rvm/scripts/rvm; then
-      [ "$(type -t rvm)" = "function" ] || source ~/.rvm/scripts/rvm
-    fi
-
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-  [[ -s "/Users/`whoami`/.local_bashrc" ]] && source "/Users/`whoami`/.local_bashrc"
+[[ -s "/Users/`whoami`/.local_bashrc" ]] && source "/Users/`whoami`/.local_bashrc"
 
