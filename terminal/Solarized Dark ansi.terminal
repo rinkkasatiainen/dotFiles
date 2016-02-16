@@ -138,6 +138,14 @@
 		<string>[O1;2D</string>
 		<key>$F703</key>
 		<string>[1;2C</string>
+		<key>$F704</key>
+		<string>[1;2P</string>
+		<key>$F705</key>
+		<string>[1;2Q</string>
+		<key>$F706</key>
+		<string>[1;2R</string>
+		<key>$F707</key>
+		<string>[1;2S</string>
 		<key>$F708</key>
 		<string>[25~</string>
 		<key>$F709</key>
@@ -217,7 +225,7 @@
 		<key>^F706</key>
 		<string>[1;5R</string>
 		<key>^F707</key>
-		<string> [1;5S</string>
+		<string>[1;5S</string>
 		<key>^F708</key>
 		<string>[15;5~</string>
 		<key>^F709</key>
