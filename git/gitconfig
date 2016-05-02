@@ -18,6 +18,6 @@
   hist = log --graph --full-history --all --pretty=format:'%Cred%h%Creset %ad %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --date=short
 
   lnames =  diff-tree --no-commit-id --name-only -r
-
+ ; git lnames HEAD | xargs -Iz scp z akis@lvinumero01.srv.ambientia.fi:.
 [push]
 	default = simple
