@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>BackgroundColor</key>
-	<data>
-	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+  <plist version="1.0">
+  <dict>
+    <key>BackgroundColor</key>
+    <data>
+    YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
 	AAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFjZVYkY2xhc3NPECww
 	Ljk4OTQzNDE4MjYgMC45NTc5NDM5MTYzIDAuODY0MDU5ODA1OSAwLjk2ABABgALSEBES
 	E1okY2xhc3NuYW1lWCRjbGFzc2VzV05TQ29sb3KiEhRYTlNPYmplY3RfEA9OU0tleWVk
@@ -139,13 +139,17 @@
 	<key>keyMapBoundKeys</key>
 	<dict>
 		<key>$F702</key>
-		<string>[1;2D</string>
+		<string>[O1;2D</string>
 		<key>$F703</key>
 		<string>[1;2C</string>
 		<key>$F704</key>
-		<string>[O1;2P</string>
+		<string>[1;2P</string>
 		<key>$F705</key>
-		<string>^[O1;5Q</string>
+		<string>[1;2Q</string>
+		<key>$F706</key>
+		<string>[1;2R</string>
+		<key>$F707</key>
+		<string>[1;2S</string>
 		<key>$F708</key>
 		<string>[25~</string>
 		<key>$F709</key>
@@ -206,12 +210,50 @@
 		<string>[34~</string>
 		<key>F728</key>
 		<string>[3~</string>
+		<key>^$F705</key>
+		<string>[1;6Q</string>
+		<key>^$F706</key>
+		<string>[1;6R</string>
+		<key>^$F707</key>
+		<string>[1;6S</string>
+		<key>^$F708</key>
+		<string>[15;6~</string>
+		<key>^$F70B</key>
+		<string>[19;6~</string>
 		<key>^F702</key>
 		<string>[1;5D</string>
 		<key>^F703</key>
 		<string>[1;5C</string>
+		<key>^F705</key>
+		<string>[1;5Q</string>
+		<key>^F706</key>
+		<string>[1;5R</string>
+		<key>^F707</key>
+		<string>[1;5S</string>
+		<key>^F708</key>
+		<string>[15;5~</string>
+		<key>^F709</key>
+		<string>[17;5~</string>
+		<key>^F70B</key>
+		<string>[19;5~</string>
+		<key>^F70C</key>
+		<string> [20;5~</string>
+		<key>^F70E</key>
+		<string>[23;5~</string>
+		<key>^F70F</key>
+		<string>[24;5~</string>
 		<key>^F728</key>
 		<string>[3;5~</string>
+		<key>~$F700</key>
+		<string>[1;4A</string>
+		<key>~$F701</key>
+		<string>[1;4B</string>
+		<key>~$F702</key>
+		<string>[1;4D</string>
+		<key>~$F703</key>
+		<string>[1;4C</string>
+		<key>~$F70B</key>
+		<string> [19;4~</string>
 		<key>~F702</key>
 		<string>b</string>
 		<key>~F703</key>
@@ -227,7 +269,7 @@
 		<key>~F708</key>
 		<string>[21~</string>
 		<key>~F709</key>
-		<string>[23~</string>
+		<string>[17;3~</string>
 		<key>~F70A</key>
 		<string>[24~</string>
 		<key>~F70B</key>
@@ -237,19 +279,23 @@
 		<key>~F70D</key>
 		<string>[28~</string>
 		<key>~F70E</key>
-		<string>[29~</string>
+		<string>[23;3~</string>
 		<key>~F70F</key>
-		<string>[31~</string>
+		<string>[24;3~</string>
 		<key>~F710</key>
 		<string>[32~</string>
 		<key>~F711</key>
 		<string>[33~</string>
 		<key>~F712</key>
 		<string>[34~</string>
+		<key>~F72C</key>
+		<string>[5;3~</string>
+		<key>~F72D</key>
+		<string>[6;3~</string>
 		<key>~^F728</key>
 		<string>[3;5~</string>
-	</dict>
-	<key>magentaColour</key>
+  </dict>
+  <key>magentaColour</key>
 	<data>
 	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMBhARm
 	ZmZmg/4CRz+DBTzdPYMgzt4+AYY=
