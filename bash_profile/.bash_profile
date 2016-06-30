@@ -17,3 +17,5 @@ export PATH=/usr/local/bin:$PATH:/usr/local/sbin
 [[ -s "/Users/`whoami`/.local_bash_profile" ]] && source "/Users/`whoami`/.local_bash_profile"
 # Get the aliases and functions
 [[ -s ~/.bashrc ]] && source ~/.bashrc
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

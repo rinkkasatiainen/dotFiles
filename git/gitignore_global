@@ -3,3 +3,5 @@
 */.java-version
 .java-version
 .slcache
+.idea/workspace.xml
+.idea/tasks.xml
