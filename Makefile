@@ -51,3 +51,19 @@ install-byobu:
 install-misc-rcs:
 	rm -rf ~/.wgetrc
 	ln -s `pwd`/wgetrc ~/.wgetrc
+
+brew-mysql:
+	brew install mysql
+
+brew-vim:
+	BREW_NOT_INSTALLED="Not installed"
+	echo $$BREW_NOT_INSTALLED
+	echo "brew info vim | grep '$$BREW_NOT_INSTALLED'"
+	NotInstalled="stuff"
+	# "$(brew info vim | grep 'Not installed')" 
+	echo $$NotInstalled
+	if ["Not installed" -eq "${NotInstalled}" ]
+	then
+	  echo "Installing vim from homebrew"
+	  command = "brew install vim"
+	fi

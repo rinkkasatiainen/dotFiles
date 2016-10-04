@@ -1,4 +1,5 @@
 " Use Vim settings, rather than Vi settings (much better!).
+" o
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
