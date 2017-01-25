@@ -193,4 +193,10 @@ autocmd QuickFixCmdPost * nested cwindow | redraw!
 autocmd BufWritePost *.coffee silent make!
 " end for coffee-sript-vim
 
+
+
+" for vim-jsx
+let g:syntastic_javascript_checkers = ['eslint']
+" end vim-jsx
+
 source $VIMRUNTIME/macros/matchit.vim

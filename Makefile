@@ -48,6 +48,9 @@ install-byobu:
 	rm -rf ~/.byobu
 	ln -s `pwd`/byobu/.byobu ~/.byobu
 
+install-es6:
+	rm -rf ~/.eslintrc
+	ln -s `pwd`/es6/.eslintrc ~/.eslintrc
 install-misc-rcs:
 	rm -rf ~/.wgetrc
 	ln -s `pwd`/wgetrc ~/.wgetrc
