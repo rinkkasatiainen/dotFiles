@@ -5,7 +5,7 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = vi
-	autocrlf = input
+	autocrlf = true
 [merge]
 	tool = vimdiff
 [color]

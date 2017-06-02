@@ -76,3 +76,6 @@ PATH="/usr/local/sbin:$PATH"
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/`whoami`/.local_bashrc" ]] && source "/Users/`whoami`/.local_bashrc"
 
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

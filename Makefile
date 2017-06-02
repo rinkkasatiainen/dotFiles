@@ -18,9 +18,10 @@ install-mutt:
 	ln -s ~/.mutt/offlineimaprc ~/.offlineimaprc
 
 install-git:
-	rm -rf ~/.gitconfig ~/.gitignore
+	rm -rf ~/.gitconfig ~/.gitignore ~/.gitattributes
 	ln -s `pwd`/git/gitconfig ~/.gitconfig
 	ln -s `pwd`/git/gitignore_global ~/.gitignore
+	ln -s `pwd`/git/gitattributes ~/.gitattributes
 
 install-zsh:
 	rm -rf ~/.zshrc ~/.oh-my-zsh ~/.zsh ~/.zprofile
@@ -34,6 +35,7 @@ install-custom-zsh: install-zsh
 	ln -s `pwd`/zsh/custom/* `pwd`/oh-my-zsh/custom/ # install custom plugins
 
 install-fish:
+	mkdir -p ~/.config
 	rm -rf ~/.config/fish
 	# [[ -s "~/.config/fish" ]] && rm -rf ~/.config/fish
 	ln -s `pwd`/fish ~/.config/fish
