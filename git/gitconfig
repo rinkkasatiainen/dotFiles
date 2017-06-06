@@ -5,7 +5,6 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = vi
-	autocrlf = true
 	attributesfile = ~/.gitattributes
 [merge]
 	tool = vimdiff
