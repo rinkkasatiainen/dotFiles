@@ -6,6 +6,7 @@
 	excludesfile = ~/.gitignore
 	editor = vi
 	attributesfile = ~/.gitattributes
+	autocrlf = input
 [merge]
 	tool = vimdiff
 [color]

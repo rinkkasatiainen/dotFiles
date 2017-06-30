@@ -4,8 +4,10 @@
 
 install: install-vim  install-git  install-fish install-bash install-byobu
 
-install-vim:
-	rm -rf ~/.vim ~/.vimrc
+install-vim: brew-vim configure-vim
+
+configure-vim:
+	rm -rf ~/.vim ~/.vimrc 
 	ln -s `pwd`/vim/.vim ~/.vim
 	ln -s `pwd`/vim/.vimrc ~/.vimrc
 
@@ -57,18 +59,45 @@ install-misc-rcs:
 	rm -rf ~/.wgetrc
 	ln -s `pwd`/wgetrc ~/.wgetrc
 
+install-nvm: | brew-update brew-nvm
+
+
+brew-update:
+	$(shell brew update)
+
+$(shell command -v nvm)
+NVM := $(shell command -v nvm 2> /dev/null)
+
+brew-nvm:
+	FOO = $(shell command -v nvm)
+	$(shell command -v nvm)
+	@echo $$NVM
+
+
+__brew-nvm:
+ifndef NVM
+	@echo '***********'
+	@echo 'install NVM'
+	@echo '***********'
+	`brew install nvm`
+	source ~/.bash_profile
+	
+#	$(shell curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash)
+endif
+
+_brew-nvm:
+	ifeq (, $(shell which nvm))
+	endif
+
 brew-mysql:
 	brew install mysql
 
 brew-vim:
-	BREW_NOT_INSTALLED="Not installed"
-	echo $$BREW_NOT_INSTALLED
-	echo "brew info vim | grep '$$BREW_NOT_INSTALLED'"
-	NotInstalled="stuff"
-	# "$(brew info vim | grep 'Not installed')" 
-	echo $$NotInstalled
-	if ["Not installed" -eq "${NotInstalled}" ]
-	then
-	  echo "Installing vim from homebrew"
-	  command = "brew install vim"
+	@if [ -e "/usr/local/bin/vim" ] ; then \
+		echo 'installed already';\
+	else \
+		echo '**************';\
+		echo 'installing VIM';\
+		echo '**************';\
+		`brew install vim`; \
 	fi

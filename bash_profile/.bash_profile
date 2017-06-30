@@ -18,4 +18,10 @@ export PATH=/usr/local/bin:$PATH:/usr/local/sbin
 # Get the aliases and functions
 [[ -s ~/.bashrc ]] && source ~/.bashrc
 
+source $(brew --prefix nvm)/nvm.sh
+
+[[ -s "$HOME/.nvm" ]] && export NVM_DIR="$HOME/.nvm"
+[[ -s "$HOME/.nvm" ]] && source $(brew --prefix nvm)/nvm.sh
+#[[ -s "$HOME/.nvm" ]] && #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
