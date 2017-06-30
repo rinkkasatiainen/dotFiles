@@ -9,7 +9,7 @@ update-brew:
 	@echo $(shell brew update)
 #	@$(shell brew update)
 
-install: update install-vim  install-git  install-fish configure-bash install-byobu
+install: update install-vim  configure-git  install-fish configure-bash install-byobu
 
 install-vim: brew-vim configure-vim
 
@@ -18,7 +18,7 @@ configure-vim:
 	ln -s `pwd`/vim/.vim ~/.vim
 	ln -s `pwd`/vim/.vimrc ~/.vimrc
 
-install-git:
+configure-git:
 	rm -rf ~/.gitconfig ~/.gitignore ~/.gitattributes
 	ln -s `pwd`/git/gitconfig ~/.gitconfig
 	ln -s `pwd`/git/gitignore_global ~/.gitignore
@@ -38,7 +38,9 @@ configure-bash:
 	ln -s `pwd`/bash_profile/.bashrc ~/.bashrc
 	ln -s `pwd`/bash_profile/.bash_profile ~/.bash_profile
 
-install-byobu:
+install-byobu: brew-byobu configure-byobu
+
+configure-byobu:
 	rm -rf ~/.byobu
 	ln -s `pwd`/byobu/.byobu ~/.byobu
 
@@ -49,11 +51,18 @@ install-misc-rcs:
 	rm -rf ~/.wgetrc
 	ln -s `pwd`/wgetrc ~/.wgetrc
 
-install-nvm: | brew-update brew-nvm
+install-nvm: brew-nvm
+
+define _brew_install
+	@echo ' $(1)'
+	@ [ -e "/usr/local/Cellar/$(1)" ] && return
+	@echo 'ypu'
+endef
+	#	[ ! -e "/usr/local/Cellar/$(1)" ] ||  $(shell brew install $(1))
 
 define brew_install
-	@echo ' $(1)'
-	if [ -e "/usr/local/Cellar/$(1)" ] ; then \
+  @echo 'install $(1)'
+	@ if [ -e "/usr/local/Cellar/$(1)" ] ; then \
 		echo 'installed already';\
 	else \
 		echo '**************';\
