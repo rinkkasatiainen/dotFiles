@@ -9,7 +9,7 @@ update-brew:
 	@echo $(shell brew update)
 #	@$(shell brew update)
 
-install: update install-vim  configure-git  install-fish configure-bash install-byobu
+install: update install-vim  install-git  install-fish configure-bash install-byobu
 
 install-vim: brew-vim configure-vim
 
@@ -17,6 +17,8 @@ configure-vim:
 	rm -rf ~/.vim ~/.vimrc 
 	ln -s `pwd`/vim/.vim ~/.vim
 	ln -s `pwd`/vim/.vimrc ~/.vimrc
+
+install-git: brew-git configure-git
 
 configure-git:
 	rm -rf ~/.gitconfig ~/.gitignore ~/.gitattributes
@@ -71,6 +73,9 @@ define brew_install
 		echo $(shell brew install $(1)); \
 	fi
 endef
+
+brew-git:
+	$(call brew_install,git)
 
 brew-byobu:
 	$(call brew_install,byobu)
