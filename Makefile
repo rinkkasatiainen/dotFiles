@@ -2,6 +2,11 @@
 # http://github.com/mitsuhiko/dotfiles/blob/master/Makefile
 # found in https://github.com/sanitz/dotfiles/blob/master/Makefile
 
+add-spacer:
+	`defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'` 
+	`killall Dock`
+
+
 update: update-brew
 
 update-brew:
