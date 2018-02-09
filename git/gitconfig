@@ -1,3 +1,4 @@
+
 [http]
 	sslVerify = false
 [include]
@@ -19,10 +20,15 @@
   hist = log --graph --full-history --all --pretty=format:'%Cred%h%Creset %ad %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --date=short
 
   lnames =  diff-tree --no-commit-id --name-only -r
-  camend = commit --amend -C HEAD
  ; git lnames HEAD | xargs -Iz scp z akis@lvinumero01.srv.ambientia.fi:.
+  camend = commit --amend -C HEAD
+  porigin = !" git push 2>&1 | grep set-upstream "
+  pushorigin = !" git porigin | sed -n s/git//gp | xargs -p git "
 [push]
 	default = simple
 [user]
 	name = Aki Salmi
 	email = aki.salmi@iki.fi
+
+[includeIf "gitdir:~/workspace/visma/"]
+  path = ~/.gitconfig_visma
