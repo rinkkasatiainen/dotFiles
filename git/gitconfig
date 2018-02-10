@@ -20,7 +20,8 @@
   hist = log --graph --full-history --all --pretty=format:'%Cred%h%Creset %ad %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --date=short
 
   lnames =  diff-tree --no-commit-id --name-only -r
- ; git lnames HEAD | xargs -Iz scp z akis@lvinumero01.srv.ambientia.fi:.
+  ; git lnames HEAD c328a887 | tar -cvf lnp_changes.tar  -T - 
+  camend = commit --amend -C HEAD
   camend = commit --amend -C HEAD
   porigin = !" git push 2>&1 | grep set-upstream "
   pushorigin = !" git porigin | sed -n s/git//gp | xargs -p git "

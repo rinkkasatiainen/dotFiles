@@ -10,8 +10,8 @@ add-spacer:
 update: update-brew
 
 update-brew:
-	@echo 'update homebrew'
-	@echo $(shell brew update)
+	@echo '**************update homebrew**************'
+	brew update
 #	@$(shell brew update)
 
 install: update install-vim  install-git  install-fish configure-bash install-byobu
