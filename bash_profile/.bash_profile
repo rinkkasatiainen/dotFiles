@@ -30,3 +30,9 @@ if [ -f '/Users/rinkkasatiainen/workspace/google-cloud-sdk/path.bash.inc' ]; the
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/rinkkasatiainen/workspace/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/rinkkasatiainen/workspace/google-cloud-sdk/completion.bash.inc'; fi
+
+if [ -f '/usr/local/bin/pyenv' ]; \
+then \ 
+  eval "$(pyenv init -)"; \
+  eval "$(pyenv virtualenv-init -)"; \
+fi

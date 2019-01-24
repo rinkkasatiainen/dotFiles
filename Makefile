@@ -18,6 +18,8 @@ install: update install-vim  install-git  install-fish configure-bash install-by
 
 install-vim: brew-vim configure-vim
 
+install-js: install-nvm configure-es6
+
 configure-vim:
 	rm -rf ~/.vim ~/.vimrc 
 	ln -s `pwd`/vim/.vim ~/.vim
@@ -28,7 +30,9 @@ install-git: brew-git configure-git
 configure-git:
 	rm -rf ~/.gitconfig ~/.gitignore ~/.gitattributes
 	ln -s `pwd`/git/gitconfig ~/.gitconfig
-	ln -s `pwd`/git/gitignore_global ~/.gitignore
+	ln -s `pwd`/git/gitconfig_work ~/.gitconfig_work
+	ln -s `pwd`/git/gitconfig_personal ~/.gitconfig_personal
+	ln -s `pwd`/git/gitignore_globall~/.gitignore
 	ln -s `pwd`/git/gitattributes ~/.gitattributes
 
 install-fish: brew-fish configure-fish
@@ -38,6 +42,10 @@ configure-fish:
 	rm -rf ~/.config/fish
 	# [[ -s "~/.config/fish" ]] && rm -rf ~/.config/fish
 	ln -s `pwd`/fish ~/.config/fish
+
+install-omf:
+	$(call curl -L https://get.oh-my.fish | fish)
+
 
 configure-bash:
 	rm -rf ~/.bashrc
@@ -51,14 +59,20 @@ configure-byobu:
 	rm -rf ~/.byobu
 	ln -s `pwd`/byobu/.byobu ~/.byobu
 
-install-es6:
+configure-es6:
 	rm -rf ~/.eslintrc
 	ln -s `pwd`/es6/.eslintrc ~/.eslintrc
 install-misc-rcs:
 	rm -rf ~/.wgetrc
 	ln -s `pwd`/wgetrc ~/.wgetrc
 
-install-nvm: brew-nvm
+install-nvm: 
+	@ if [ -e "~/.nvm" ] ; then \
+		echo '~/.nvm directory exists'
+	else \
+		echo $(shell mkdir ~/.nvm); \
+	fi
+	$(call curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash)
 
 define _brew_install
 	@echo ' $(1)'

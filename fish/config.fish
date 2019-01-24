@@ -32,6 +32,9 @@ set __fish_git_prompt_char_stashstate '↩'
 set __fish_git_prompt_char_upstream_ahead '+'
 set __fish_git_prompt_char_upstream_behind '-'
 
+#pyenv virtualenv
+status --is-interactive; and source (pyenv init -|psub)
+status --is-interactive; and source (pyenv virtualenv-init -|psub)
 
 function fish_prompt
   set last_status $status
@@ -46,4 +49,4 @@ function fish_prompt
 end
 
 set fish_key_bindings fish_vi_key_bindings
-rvm default
+#rvm default

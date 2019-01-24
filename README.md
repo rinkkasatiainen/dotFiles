@@ -12,6 +12,8 @@ Install following apps before:
  * RVM, NVM
  * omf install nvm
 
+ ## OMF oh-my-fish
+
 
 ## configuration
  - as I'm using git submodules, do not forget to run 'git submodule update --init --recursive' to init submodules 
