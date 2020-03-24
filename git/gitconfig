@@ -27,6 +27,9 @@
   tcr = !git add -u && git camend
 [push]
 	default = simple
+[user]
+  name = Aki Salmi
+  email = aki.salmi@iki.fi
 
 [includeIf "gitdir:~/workspace/"]
   path = ~/.gitconfig_personal

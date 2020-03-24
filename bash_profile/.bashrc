@@ -2,11 +2,15 @@
 PS1='\h:\W \u\$ '
 
 alias byobu="TERM=screen-256color-bce byobu"
+BYOBU_PYTHON=/usr/bin/python
+
   #setenv TERM "xterm-color"
 #setenv CLICOLOR "true"
 export LSCOLORS=exfxcxdxbxexexabagacad
 
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
+# !!! Remore pythonpath, using pyenv inisted
+##export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
+
 ##alias tmux="TERM=screen-256color tmux" #this makes colors work with tmux
 #### alias tmux="TERM=screen-256color-bce tmux"
 
