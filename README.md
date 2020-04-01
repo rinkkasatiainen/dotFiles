@@ -7,6 +7,9 @@ Install following apps before:
  * dropbox (optional)
  * 1Password (use dropbox, and later account)
  * homebrew [install](https://docs.brew.sh/Installation)
+    * brew install git
+    * git clone
+    * make Makefile
  * all necessary Apps from AppStore
  * Jetbrains accounts -> IDEs
  * RVM, NVM
