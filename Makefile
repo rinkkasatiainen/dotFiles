@@ -29,10 +29,11 @@ install-git: brew-git configure-git
 
 configure-git:
 	rm -rf ~/.gitconfig ~/.gitignore ~/.gitattributes
+	rm -rf ~/.gitconfig_work ~/.gitconfig_personal
 	ln -s `pwd`/git/gitconfig ~/.gitconfig
 	ln -s `pwd`/git/gitconfig_work ~/.gitconfig_work
 	ln -s `pwd`/git/gitconfig_personal ~/.gitconfig_personal
-	ln -s `pwd`/git/gitignore_globall~/.gitignore
+	ln -s `pwd`/git/gitignore_global ~/.gitignore
 	ln -s `pwd`/git/gitattributes ~/.gitattributes
 
 install-fish: brew-fish configure-fish

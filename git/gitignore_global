@@ -7,4 +7,8 @@
 .idea/tasks.xml
 .ruby-version
 .idea 
+
+tmp/
+
+node_modules
 npm-debug.log

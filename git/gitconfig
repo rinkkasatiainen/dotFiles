@@ -25,6 +25,7 @@
   porigin = !" git push 2>&1 | grep set-upstream "
   pushorigin = !" git porigin | sed -n s/git//gp | xargs -p git "
   tcr = !git add -u && git camend
+  untracked = !git ls-files --others --exclude-standard -x -o
 [push]
 	default = simple
 [user]
