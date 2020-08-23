@@ -42,8 +42,8 @@ install-jenv: brew-jenv
 
 configure-fish:
 	mkdir -p ~/.config
-	# rm -rf ~/.config/fish
-	[[ -s "~/.config/fish" ]] && rm -rf ~/.config/fish
+	rm -rf ~/.config/fish
+	# [[ -s "~/.config/fish" ]] && rm -rf ~/.config/fish
 	ln -s `pwd`/fish ~/.config/fish
 
 install-omf:
