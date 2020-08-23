@@ -4,6 +4,9 @@ PS1='\h:\W \u\$ '
 alias byobu="TERM=screen-256color-bce byobu"
 BYOBU_PYTHON=/usr/bin/python
 
+export GOPATH="${HOME}/.go"
+
+
   #setenv TERM "xterm-color"
 #setenv CLICOLOR "true"
 export LSCOLORS=exfxcxdxbxexexabagacad

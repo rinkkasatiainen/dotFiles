@@ -14,7 +14,7 @@ update-brew:
 	brew update
 #	@$(shell brew update)
 
-install: update install-vim  install-git  install-fish configure-bash install-byobu
+install: update install-vim  install-git  install-fish configure-bash install-byobu install-omf
 
 install-vim: brew-vim configure-vim
 
@@ -31,17 +31,19 @@ configure-git:
 	rm -rf ~/.gitconfig ~/.gitignore ~/.gitattributes
 	rm -rf ~/.gitconfig_work ~/.gitconfig_personal
 	ln -s `pwd`/git/gitconfig ~/.gitconfig
-	ln -s `pwd`/git/gitconfig_work ~/.gitconfig_work
+	ln -s `pwd`/git/gitconfig_work ~/.gitconfig_work;\
 	ln -s `pwd`/git/gitconfig_personal ~/.gitconfig_personal
 	ln -s `pwd`/git/gitignore_global ~/.gitignore
 	ln -s `pwd`/git/gitattributes ~/.gitattributes
 
 install-fish: brew-fish configure-fish
 
+install-jenv: brew-jenv
+
 configure-fish:
 	mkdir -p ~/.config
-	rm -rf ~/.config/fish
-	# [[ -s "~/.config/fish" ]] && rm -rf ~/.config/fish
+	# rm -rf ~/.config/fish
+	[[ -s "~/.config/fish" ]] && rm -rf ~/.config/fish
 	ln -s `pwd`/fish ~/.config/fish
 
 install-omf:
@@ -68,12 +70,12 @@ install-misc-rcs:
 	ln -s `pwd`/wgetrc ~/.wgetrc
 
 install-nvm: 
-	@ if [ -e "~/.nvm" ] ; then \
-		echo '~/.nvm directory exists'
+	if [[ -s "~/.nvm" ]] ; then \
+		echo '~/.nvm directory exists';\
 	else \
-		echo $(shell mkdir ~/.nvm); \
+	  mkdir ~/.nvm; \
 	fi
-	$(call curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash)
+	$(call curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash)
 
 define _brew_install
 	@echo ' $(1)'
@@ -99,6 +101,9 @@ brew-git:
 
 brew-byobu:
 	$(call brew_install,byobu)
+
+brew-jenv:
+	$(call brew_install,jenv)
 
 brew-fish:
 	$(call brew_install,fish)

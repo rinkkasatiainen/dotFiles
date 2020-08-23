@@ -35,5 +35,9 @@
 [includeIf "gitdir:~/workspace/"]
   path = ~/.gitconfig_personal
 
-[includeIf "gitdir:~/workspace/ambientia/"]
+[includeIf "gitdir:~/workspace/bryter/"]
   path = ~/.gitconfig_work
+[pull]
+	rebase = true
+[rerere]
+	enabled = true
