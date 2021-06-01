@@ -19,6 +19,15 @@ Install following apps before:
 
 
 ## configuration
+ - before cloning the dotfiles, SSH needs to be configured:
+
+```
+akisalmi@Aki-MacBook-Pro dotfiles % cat ~/.ssh/config 
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/aki.salmi_iki.fi
+```
  - as I'm using git submodules, do not forget to run 'git submodule update --init --recursive' to init submodules 
 
 
