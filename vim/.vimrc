@@ -30,17 +30,17 @@ let g:solarized_contrast = "high"
 set background=dark
 let w:solarized_style="dark"
 let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme solarized8_high
 
 function! ToggleBackground()
   if (w:solarized_style=="dark")
     let w:solarized_style="light"
     set background=light
-    colorscheme solarized
+    colorscheme solarized8_high
   else
     let w:solarized_style="dark"
     set background=dark
-    colorscheme solarized
+    colorscheme solarized8_high
   endif
 endfunction
 command! Togbg call ToggleBackground()

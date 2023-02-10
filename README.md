@@ -38,6 +38,9 @@ echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 ## vim
  * https://blog.sourcerer.io/making-vim-great-again-cdfbc281428b
 
+install solarized:
+
+https://vimawesome.com/plugin/solarized-8
 ## git
 some links to consider of git aliases
 

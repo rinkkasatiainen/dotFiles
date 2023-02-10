@@ -43,3 +43,5 @@ then \
   eval "$(pyenv init -)"; \
   eval "$(pyenv virtualenv-init -)"; \
 fi
+
+source /Users/akisalmi/.docker/init-bash.sh || true # Added by Docker Desktop

@@ -77,16 +77,10 @@ install-nvm:
 	fi
 	$(call curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash)
 
-define _brew_install
-	@echo ' $(1)'
-	@ [ -e "/usr/local/Cellar/$(1)" ] && return
-	@echo 'ypu'
-endef
-	#	[ ! -e "/usr/local/Cellar/$(1)" ] ||  $(shell brew install $(1))
-
 define brew_install
   @echo 'install $(1)'
-	@ if [ -e "/usr/local/Cellar/$(1)" ] ; then \
+	if [ -e "/opt/homebrew/Cellar/$(1)" ] ; \
+	then \
 		echo 'installed already';\
 	else \
 		echo '**************';\
@@ -120,23 +114,3 @@ brew-mariadb:
 brew-mysql:
 	$(call brew_install,mysql)
 
-_brew-nvm:
-	@echo 'installing nvm'
-	@if [ -e "/usr/local/Cellar/nvm" ] ; then \
-		echo 'installed already';\
-	else \
-		echo '**************';\
-		echo 'installing nvm';\
-		echo '**************';\
-		`brew install nvm`; \
-	fi
-
-_brew-vim:
-	@if [ -e "/usr/local/bin/vim" ] ; then \
-		echo 'installed already';\
-	else \
-		echo '**************';\
-		echo 'installing VIM';\
-		echo '**************';\
-		`brew install vim`; \
-	fi
