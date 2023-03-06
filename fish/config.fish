@@ -51,3 +51,5 @@ end
 set fish_key_bindings fish_vi_key_bindings
 
 eval (direnv hook fish)
+
+source /Users/akisalmi/.docker/init-fish.sh || true # Added by Docker Desktop
