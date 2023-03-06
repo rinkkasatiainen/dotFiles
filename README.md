@@ -23,12 +23,16 @@ Install following apps before:
 
 ```
 akisalmi@Aki-MacBook-Pro dotfiles % cat ~/.ssh/config 
-Host *
+Host github
   AddKeysToAgent yes
   UseKeychain yes
-  IdentityFile ~/.ssh/aki.salmi_iki.fi
+  Host github.com
+  IdentityFile ~/.ssh/aki_salmi
 ```
- - as I'm using git submodules, do not forget to run 'git submodule update --init --recursive' to init submodules 
+
+### configurating SSH
+
+
 
 
 ## Fish shell

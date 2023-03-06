@@ -24,6 +24,8 @@ configure-vim:
 	rm -rf ~/.vim ~/.vimrc 
 	ln -s `pwd`/vim/.vim ~/.vim
 	ln -s `pwd`/vim/.vimrc ~/.vimrc
+	[ !  -d "~/.vim/pack/themes/opt/solarized8" ] && echo "VIM solarized already installed" || echo "install vim"
+	# [ -d "~/.vim/pack/themes/opt/solarized8" ] && echo "VIM solarized already installed" || git clone https://github.com/lifepillar/vim-solarized8.git ~/.vim/pack/themes/opt/solarized8;\
 
 install-git: brew-git configure-git
 
@@ -86,7 +88,6 @@ define brew_install
 		echo '**************';\
 		echo 'installing $(1)';\
 		echo '**************';\
-		echo $(shell brew install $(1)); \
 	fi
 endef
 
